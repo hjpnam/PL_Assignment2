@@ -89,7 +89,7 @@ fun remove_card(cs, c, e) =
             case cList of
                   [] => raise e
                 | x :: xs => if x = c
-                             then acc
+                             then acc @ xs
                              else f(xs, x :: acc)
     in f(cs, [])
     end
